@@ -1,0 +1,261 @@
+:root {
+  --bg: #f4f5f7;
+  --panel: #ffffff;
+  --border: #dfe1e6;
+  --text: #172b4d;
+  --muted: #6b778c;
+  --primary: #0052cc;
+  --primary-dark: #0747a6;
+  --danger: #de350b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app__header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.app__header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.app__main {
+  display: grid;
+  grid-template-columns: minmax(320px, 460px) 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .app__main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.panel h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.panel--preview {
+  position: sticky;
+  top: 24px;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+}
+
+.form fieldset {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 16px;
+  padding: 16px 0 0;
+}
+
+.form fieldset:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.form legend {
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.field__label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.field input[type="text"],
+.field input[type="date"],
+.field input[type="number"],
+.field textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  color: inherit;
+  background: #fafbfc;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid var(--primary);
+  background: #fff;
+}
+
+.field__hint {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.field__error {
+  display: block;
+  font-size: 12px;
+  color: var(--danger);
+  margin-top: 4px;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.choice__option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.choice__number {
+  width: 72px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.form__error {
+  color: var(--danger);
+  font-size: 14px;
+}
+
+.button {
+  appearance: none;
+  border: none;
+  border-radius: 4px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button--secondary {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.button--secondary:hover:not(:disabled) {
+  background: #e9f2ff;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  flex: 1;
+}
+
+.preview--empty {
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+}
+
+.preview__toolbar {
+  margin-bottom: 12px;
+}
+
+.preview__document {
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 24px;
+  background: #fff;
+  flex: 1;
+}
+
+.preview__document h1 {
+  font-size: 22px;
+}
+
+.preview__document h2 {
+  font-size: 18px;
+}
+
+.preview__document h3 {
+  font-size: 15px;
+}
+
+.preview__document table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.preview__document th,
+.preview__document td {
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.preview__document hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+.preview__document code {
+  background: var(--bg);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
