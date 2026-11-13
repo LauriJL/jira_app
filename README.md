@@ -1,10 +1,11 @@
 # PreLegal
 
 Jira sw development Kanban board for PreLegal — tools that help users create legal documents.
+Created with OpenCode. Utilising Atlassian and GitHub MCPs. 
 
 ## Status
 
-**In progress** — this project is under active development and is expected to be completed in 1 week (by 15 October 2026).
+**In progress** 
 
 ## Mutual NDA creator
 
