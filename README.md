@@ -1,7 +1,8 @@
 # PreLegal
 
 Jira sw development Kanban board for PreLegal — tools that help users create legal documents.
-Created with OpenCode. Utilising Atlassian and GitHub MCPs. 
+
+Created with OpenCode and utilising Atlassian and GitHub MCPs. 
 
 ## Status
 
